@@ -1,4 +1,4 @@
-package org;
+package dao;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
