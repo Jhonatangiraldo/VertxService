@@ -27,6 +27,12 @@ public class VertxActions {
 			.putHeader(CONTENT_TYPE, TYPE_APPLICATION)
 			.end(Json.encodePrettily(products.values()));
 	}
+	
+	protected void getAllWhiskiesMap(RoutingContext routingContext) {
+		routingContext.response()
+			.putHeader(CONTENT_TYPE, TYPE_APPLICATION)
+			.end(Json.encodePrettily(products));
+	}
 
 	protected void addOneWhiskie(RoutingContext routingContext) { 
 		final Whisky whisky = Json.decodeValue(routingContext.getBodyAsString(), Whisky.class);

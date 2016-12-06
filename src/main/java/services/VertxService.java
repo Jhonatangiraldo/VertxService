@@ -32,6 +32,7 @@ public class VertxService extends AbstractVerticle {
 	 
 		
 		router.get("/api/whiskies").handler(vertxActions::getAllWhiskies);
+		router.get("/api/whiskiesMap").handler(vertxActions::getAllWhiskiesMap);
 	 
 		// maps POST requests on /api/whiskies to the addOne method
 		router.post("/api/whiskies").handler(vertxActions::addOneWhiskie);
